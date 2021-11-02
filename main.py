@@ -18,8 +18,10 @@ def job():
         print("Sorry, no free spots for now", datetime.now().strftime("%H:%M:%S"))
 
 
-schedule.every(10).seconds.do(job)
-# schedule.every(10).minutes.do(job)
+job()
+
+# schedule.every(10).seconds.do(job)
+schedule.every(10).minutes.do(job)
 # schedule.every().day.at("10:30").do(job)
 
 while 1:
